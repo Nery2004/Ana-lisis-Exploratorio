@@ -53,3 +53,22 @@ barplot(
   ylab = "Promedio de Pérdidas",
   las = 2
 )
+
+# EJERCICIO f
+# Ejercicio A
+summary(carros[, c("price", "horsepower", "engine_size", "city_mpg")])
+sd(carros$price, na.rm = TRUE)
+# Ejercicio B
+# Histograma
+hist(carros$price, main="Distribución del Precio", col="lightblue")
+
+# Prueba de Shapiro-Wilk
+shapiro.test(carros$price)
+# Ejercicio C
+# Tabla de frecuencias
+table(carros$body_style)
+table(carros$make)
+# Ejercicio D
+# Correlación entre precio y tamaño del motor
+cor(carros$price, carros$engine_size, use = "complete.obs")
+
